@@ -15,7 +15,7 @@ Projekt sme nestavali ako sériu oddelených statických analýz, ale ako ucelen
 ## 👥 Autorský tím a rozdelenie rolí
 * **Timea Halászová:** Manažment projektu a definícia byznys/policy modelu. *(Zodpovednosť: Pivotovanie projektu na CHOPN, integrácia lekárskych faktov a štúdií ERS do dátovej argumentácie).*
 * **Zuzana Mitterová:** Metodika výskumu a vizualizácia dát (Plotly). *(Zodpovednosť: Aplikácia Data Storytellingu na demonštrovanie dopadov na zdravie pacientov. Mapovanie meraní voči prísnym limitom WHO).*
-* **Bojan Petric:** Data engineering a čistenie dát. *(Zodpovednosť: Práca s knižnicou Pandas, matematická deduplikácia pre stanovenie exaktného výpočtu "Toxických hodín", fúzia meteorologických dát s environmentálnymi).*
+* **Bojan Petric:** Data Quality & Validation Engineer. *(Zodpovednosť: kontrola konzistence časových řad a validace výpočtu, testovanie scenárov, validácia dátových výstupov voči strategickým pilierom akčného plánu).*
 * **Daniel Mucska:** Vývoj architektúry a API integrácia (Streamlit). *(Zodpovednosť: Návrh cloudovej aplikácie, ošetrenie REST API výpadkov, Release management a správa repozitára).*
 
 ---
