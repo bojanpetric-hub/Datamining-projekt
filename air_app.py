@@ -314,7 +314,7 @@ med_desc = {
 # ============================================
 # REŽIM 1: DOKUMENTÁCIA (ZADANIE PROJEKTU)
 # ============================================
-# [OBHAJOBA] Týmto blokom spĺňame akademické požiadavky na odovzdanie.
+# [OBHAJOBA] Týmto blokom spĺňame akademické požiadavky na odovzdanie dokumentácie a metodiky.
 if app_mode == "📄 Metodika a Dokumentácia":
     st.title("📄 Dokumentácia: Zdravotný audit ovzdušia a dopad na CHOPN")
     
@@ -339,7 +339,7 @@ if app_mode == "📄 Metodika a Dokumentácia":
         * **Definícia problému:** Mesto Praha nemonitoruje ovzdušie primárne s ohľadom na pacientov s chronickými respiračnými ochoreniami (CHOPN, astma). Magistrátu chýbal nástroj, ktorý by ukázal, akou mierou doprava vs. počasie prispievajú k akútnemu zhoršovaniu stavu týchto pacientov.
         * **Byznysový a politický prínos:**
             1. **Ochrana verejného zdravia:** Exaktný výpočet preťaženia systému (Toxické hodiny) umožňuje včasnú aktiváciu varovných SMS systémov pre registrovaných pacientov s CHOPN a prípravu pohotovostných príjmov.
-            2. **Riadenie dopravy:** Dôkazy na bezprecedentné zavedenie dynamického mýta počas dopravných špičiek za účelom zníženia smrtiacich hodnôt NO2 a PM2.5.
+            2. **Riadenie dopravy:** Dôkazy na bezprecedentné zavedenie Nízkoemisnej zóny (NEZ) a plošnú reguláciu tranzitu v centre za účelom zníženia smrtiacich hodnôt NO2 a PM2.5.
             3. **Urbanizmus:** Dôkaz, že mestské parky fungujú ako fyzické filtre (bezpečné oázy), zamedzí ich developerskej likvidácii.
         """)
 
@@ -362,7 +362,7 @@ if app_mode == "📄 Metodika a Dokumentácia":
 
     with st.expander("5. Výsledky a závěr"):
         st.write("""
-        Dáta potvrdili, že mesto systematicky zlyháva v ochrane pacientov s CHOPN. Ranné automobilové špičky v pracovných dňoch produkujú toxické množstvá NO2 a PM10, ktoré sú hlavnými spúšťačmi exacerbácií. Pri bezvetrí (vietor < 5 km/h) mesto preukázateľne stráca samočistiacu schopnosť. Navrhli sme preto radikálny 'Akčný plán' s návrhom na záchytné parkoviská a nedotknuteľnosť mestských parkov.
+        Dáta potvrdili, že mesto systematicky zlyháva v ochrane pacientov s CHOPN. Ranné automobilové špičky v pracovných dňoch produkujú toxické množstvá NO2 a PM10, ktoré sú hlavnými spúšťačmi exacerbácií. Pri bezvetrí (vietor < 5 km/h) mesto preukázateľne stráca samočistiacu schopnosť. Navrhli sme preto radikálny 'Akčný plán' s návrhom na záchytné parkoviská, nízkoemisné zóny (NEZ) a nedotknuteľnosť mestských parkov.
         """)
 
     with st.expander("6. Přehled zodpovědností členů týmu"):
@@ -483,10 +483,11 @@ elif app_mode == "📊 Zdravotný Dashboard":
     with tabs[1]:
         st.markdown("<div class='audit-title'>📋 Záväzný akčný plán krízovej intervencie (CHOPN)</div>", unsafe_allow_html=True)
         
+        # [OBHAJOBA] Prepojenie na reálnu mestskú politiku (Klimatický plán 2030)
         st.markdown("""
         <div class='danger-card'>
             <b><span style='font-size: 18px;'>🚨 Smernica pre Magistrát hl. m. Prahy</span></b><br>
-            Dáta preukazujú systematické ohrozovanie zdravia chronicky chorých pacientov s CHOPN a astmou. Nasledujúci strategický dokument poskytuje fázované exekutívne kroky pre okamžité zníženie mortality a odľahčenie akútnych nemocničných príjmov.
+            Tento akčný plán stavia na schválenom <b>Klimatickom pláne hl. m. Prahy do roku 2030</b>, avšak rozširuje ho o kritickú zdravotnú dimenziu. Zatiaľ čo doterajší mestský plán rieši primárne ekológiu a CO2, náš audit na základe dát ERS definuje <b>okamžité riešenie PM2.5 a NO2</b> ako urgentnú prioritu pre zníženie mortality pacientov s CHOPN a odľahčenie akútnych nemocničných príjmov.
         </div>
         """, unsafe_allow_html=True)
 
@@ -514,22 +515,22 @@ elif app_mode == "📊 Zdravotný Dashboard":
                 hide_index=True, 
                 use_container_width=True
             )
-            st.markdown("<i style='font-size: 13px; color: #7f8c8d;'>Tieto uzly musia byť primárnym cieľom okamžitého obmedzenia dopravy z dôvodu najvyššieho rizika exacerbácie CHOPN.</i>", unsafe_allow_html=True)
+            st.markdown("<i style='font-size: 13px; color: #7f8c8d;'>Tieto uzly musia byť primárnym cieľom obmedzenia dopravy v súlade s cieľmi udržateľnej mobility Klimatického plánu.</i>", unsafe_allow_html=True)
 
         st.markdown("---")
         st.markdown("### 🏛️ FÁZA 2: Strategické piliere nápravných opatrení")
         
         # Opatrenia na zbalenie (Expandery), udržujú appku vizuálne čistú
-        with st.expander("🚨 PILIER I: Radikálna reorganizácia dopravy (Zníženie rizika exacerbácií)", expanded=True):
+        with st.expander("🚨 PILIER I: Radikálna reorganizácia dopravy (Akcelerácia Klimatického plánu 2030)", expanded=True):
             st.markdown("""
             **Cieľ opatrenia:** Redukcia denných priemerov NO2 a jemného prachu v dýchacích zónach o 30 % do 12 mesiacov.
             
             * **Opatrenie 1.1: Zamedzenie ranných špičiek (Školské ochranné zóny)**
                 * *Popis:* Eliminácia prachu a výfukov zakázaním vjazdu individuálnej dopravy do okolia škôl a nemocníc v čase od 7:00 do 8:30.
                 * *Gestor:* Odbor dopravy MHMP | *Horizont nasadenia:* Q3 2026
-            * **Opatrenie 1.2: Dynamické mýto v centre (Smart Tolling)**
-                * *Popis:* Napojenie dopravného mýta priamo na dáta z Golemio API. Pri prekročení limitov PM2.5 sa systém dynamicky prepne do krízového režimu a vjazd áut nerezidentov sa zdražie trojnásobne.
-                * *Gestor:* Operátor ICT / Odbor dopravy MHMP | *Horizont nasadenia:* Q1 2027
+            * **Opatrenie 1.2: Implementácia Nízkoemisnej zóny (NEZ) a regulácia tranzitu**
+                * *Popis:* Zavedenie NEZ v širšom centre s úplným zákazom vjazdu starších dieselových vozidiel. Prepojenie s Golemio API zabezpečí, že počas krízových smogových dní sa systém automaticky rozšíri o plošný zákaz tranzitnej dopravy pre nerezidentov cez historické centrum (P1).
+                * *Gestor:* Odbor dopravy MHMP / IPR Praha | *Horizont nasadenia:* Q1 2027
             * **Opatrenie 1.3: Krízová podpora P+R infraštruktúry**
                 * *Popis:* Zavedenie bezplatnej MHD pre záchytné parkoviská na kraji mesta výhradne počas dní so zhoršenými rozptylovými podmienkami (inverzia).
                 * *Gestor:* ROPID | *Horizont nasadenia:* Okamžite
